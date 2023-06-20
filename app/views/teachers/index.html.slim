@@ -1,0 +1,19 @@
+h1 = title('Teachers')
+
+table.table.table-striped.table-hover.table-sm
+  thead
+    tr
+      th scope="col" First name
+      th scope="col" Last name
+      th colspan="3" scope="col"
+
+  tbody
+    - @teachers.each do |teacher|
+      tr
+        td = teacher.first_name
+        td = teacher.last_name
+        td = link_to 'Show', teacher
+        td = link_to 'Edit', edit_teacher_path(teacher)
+        td = link_to 'Destroy', teacher, data: { confirm: 'Are you sure?' }, method: :delete
+br
+= link_to 'New Teacher', new_teacher_path

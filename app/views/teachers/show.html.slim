@@ -1,0 +1,9 @@
+h1 Teacher
+dl
+  dt First name:
+  dd = @teacher.first_name
+  dt Last name:
+  dd = @teacher.last_name
+= link_to 'Edit', edit_teacher_path(@teacher)
+'|
+= link_to 'Back', teachers_path

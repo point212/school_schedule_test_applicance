@@ -1,0 +1,9 @@
+h1 Subject
+dl
+  dt Name:
+  dd = @subject.name
+  dt Description:
+  dd = @subject.description
+= link_to 'Edit', edit_subject_path(@subject)
+'|
+= link_to 'Back', subjects_path
