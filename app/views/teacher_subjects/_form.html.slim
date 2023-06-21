@@ -1,0 +1,10 @@
+= simple_form_for(@teacher_subject) do |f|
+  = errors_for(@teacher_subject)
+
+  .form-inputs
+      = f.association :teacher
+      = f.association :subject
+      = f.input :level
+
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
