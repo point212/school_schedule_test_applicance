@@ -4,6 +4,11 @@ dl
   dd = @teacher.first_name
   dt Last name:
   dd = @teacher.last_name
-= link_to 'Edit', edit_teacher_path(@teacher)
-'|
-= link_to 'Back', teachers_path
+
+= link_to 'Teacher Subjects',  teacher_subject_path(@teacher)
+br
+br
+
+button.btn.btn-outline-primary = link_to 'Back', teachers_path
+button.btn.btn-outline-warning = link_to 'Edit', edit_teacher_path(@teacher)
+
