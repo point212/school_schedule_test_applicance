@@ -21,6 +21,8 @@ gem "jsbundling-rails"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 
+gem "importmap-rails"
+
 gem 'bootstrap', '~> 5.3.0.alpha3'
 
 gem 'jquery-rails'
