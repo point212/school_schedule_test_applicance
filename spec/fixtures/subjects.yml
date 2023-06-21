@@ -8,8 +8,13 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-require 'rails_helper'
+math:
+  name: Math
+  description: All about numbers
 
-RSpec.describe Subject, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+english:
+  name: English
+  description: Language that everyone knows
+
+subject_without_teacher:
+  name: Subject without teacher

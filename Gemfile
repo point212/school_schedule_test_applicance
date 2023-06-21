@@ -33,6 +33,8 @@ gem 'simple_form'
 
 gem 'inherited_resources'
 
+gem 'dotenv-rails'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -55,6 +57,8 @@ group :development, :test do
   gem 'rubocop'
   gem 'ffaker'
   gem 'factory_bot'
+  gem 'awesome_print'
+  gem 'pry'
 end
 
 group :development do

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_20_205715) do
   create_table "subjects", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -21,16 +21,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_205715) do
   create_table "teacher_subjects", force: :cascade do |t|
     t.integer "teacher_id", null: false
     t.integer "subject_id", null: false
-    t.integer "level"
+    t.integer "level", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["subject_id"], name: "index_teacher_subjects_on_subject_id"
+    t.index ["teacher_id", "subject_id"], name: "index_teacher_subjects_on_teacher_id_and_subject_id", unique: true
     t.index ["teacher_id"], name: "index_teacher_subjects_on_teacher_id"
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

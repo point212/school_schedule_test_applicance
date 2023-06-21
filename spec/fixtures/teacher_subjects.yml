@@ -20,26 +20,16 @@
 #  subject_id  (subject_id => subjects.id)
 #  teacher_id  (teacher_id => teachers.id)
 #
-class TeacherSubject < ApplicationRecord
-  DEFAULT_LEVEL = 5
+math_teacher_math:
+  teacher: math_teacher
+  subject: math
+  level: 10
 
-  belongs_to :teacher
-  belongs_to :subject
-
-  validates :teacher, uniqueness: {scope: :subject}, if: :_not_marked_for_destruction?
-
-  validates :level, presence: true
-  before_validation :_default_values_on_create, on: :create
-
-  def _default_values_on_create
-    self.level ||= DEFAULT_LEVEL
-    # return value should be true or nil
-    true
-  end
-
-  def _not_marked_for_destruction?
-    # Rails validation does not work well when we update subject with
-    # teacher_subjects_attributes when we mark_for_destruction
-    subject.teacher_subjects.none?(&:_destroy)
-  end
-end
+math_and_english_teacher_math:
+  teacher: math_and_english_teacher
+  subject: math
+  level: 8
+math_and_english_teacher_english:
+  teacher: math_and_english_teacher
+  subject: english
+  level: 9
