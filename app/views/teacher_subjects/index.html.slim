@@ -11,11 +11,11 @@ table.table.table-striped.table-hover.table-sm
   tbody
     - @teacher_subjects.each do |teacher_subject|
       tr
-        td = teacher_subject.teacher
-        td = teacher_subject.subject
+        td = teacher_subject.teacher.full_name
+        td = teacher_subject.subject.name
         td = teacher_subject.level
-        td = link_to 'Show', teacher_subject
-        td = link_to 'Edit', edit_teacher_subject_path(teacher_subject)
-        td = link_to 'Destroy', teacher_subject, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to 'Show', teacher_subject_path(id: teacher_subject.id)
+        td = link_to 'Edit', edit_teacher_subject_path(id: teacher_subject.id)
+        td = link_to 'Destroy',  teacher_subject_path(id: teacher_subject.id), data: { confirm: 'Are you sure?' }, method: :delete
 br
 = link_to 'New Teacher Subject', new_teacher_subject_path

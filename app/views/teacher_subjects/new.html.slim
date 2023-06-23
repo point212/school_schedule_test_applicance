@@ -1,4 +1,4 @@
 h1 New Teacher Subjects
 
-= render 'form', teacher_subject: @teacher_subject
-= link_to 'Back', teacher_subjects_path
+= render 'form', teacher_subject: @teacher_subject, url: teacher_subject_index_path, method: :post
+= link_to 'Back', teacher_subject_index_path

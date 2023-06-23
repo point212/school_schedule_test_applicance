@@ -1,11 +1,11 @@
 h1 Teacher Subject
 dl
   dt Teacher:
-  dd = @teacher_subject.teacher
+  dd = @teacher_subject.teacher.full_name
   dt Subject:
-  dd = @teacher_subject.subject
+  dd = @teacher_subject.subject.name
   dt Level:
   dd = @teacher_subject.level
-= link_to 'Edit', edit_teacher_subject_path(@teacher_subject)
+= link_to 'Edit', edit_teacher_subject_path(teacher_id: @teacher_subject.teacher.id, id: @teacher_subject)
 '|
-= link_to 'Back', teacher_subjects_path
+= link_to 'Back', teacher_subject_path

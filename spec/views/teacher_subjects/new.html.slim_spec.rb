@@ -12,7 +12,7 @@ RSpec.describe "teacher_subjects/new", type: :view do
   it "renders new teacher_subject form" do
     render
 
-    assert_select "form[action=?][method=?]", teacher_subjects_path, "post" do
+    assert_select "form[action=?][method=?]", teacher_subject_index_path, "post" do
 
       assert_select "input[name=?]", "teacher_subject[teacher_id]"
 

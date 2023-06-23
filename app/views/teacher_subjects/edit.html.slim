@@ -1,7 +1,7 @@
 h1 Editing Teacher Subjects
 
-= render 'form', teacher_subject: @teacher_subject
+= render 'form', teacher_subject: @teacher_subject, url: teacher_subject_path, method: :patch
 
 = link_to 'Show', @teacher_subject
 '|
-= link_to 'Back', teacher_subjects_path
+= link_to 'Back', teacher_subject_path

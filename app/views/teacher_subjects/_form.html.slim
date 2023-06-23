@@ -1,8 +1,9 @@
-= simple_form_for(@teacher_subject) do |f|
+/ - binding.pry
+= simple_form_for(@teacher_subject, url: url, method: method) do |f|
   = errors_for(@teacher_subject)
 
   .form-inputs
-      = f.association :teacher
+      = f.association :teacher, label_method: :full_name
       = f.association :subject
       = f.input :level
 
