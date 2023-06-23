@@ -1,0 +1,9 @@
+h1 Classroom
+dl
+  dt Number:
+  dd = @classroom.number
+  dt Address:
+  dd = @classroom.address
+= link_to 'Edit', edit_classroom_path(@classroom)
+'|
+= link_to 'Back', classrooms_path

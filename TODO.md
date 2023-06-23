@@ -1,7 +1,9 @@
 == Teacher related tasks
 
+
 === Classrooms
-[] Add classroom model
+[] Scaffold Classroom model
+[] Add some relations to Classroom model
 
 === Sections management
 [] Add Sections model
@@ -10,6 +12,9 @@
 [] Write specs on model
 
 == Student related Tasks
+
+=== Student
+[] Scaffold student model
 
 === Schedule management
 [] Schedule model
