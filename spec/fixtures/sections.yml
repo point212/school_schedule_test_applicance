@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: sections
+#
+#  id                 :integer          not null, primary key
+#  days_of_week       :string
+#  duration           :integer          not null
+#  start_time         :integer          not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  student_id         :integer          not null
+#  teacher_subject_id :integer          not null
+#
+# Indexes
+#
+#  index_sections_on_student_id          (student_id)
+#  index_sections_on_teacher_subject_id  (teacher_subject_id)
+#
+# Foreign Keys
+#
+#  student_id          (student_id => students.id)
+#  teacher_subject_id  (teacher_subject_id => teacher_subjects.id)
+#
+math_at_10am:
+  teacher_subject: math_teacher_math
+  classroom: '101'
+  start_time: 36000
+  duration: 50
+  days_of_week: 'TH'
