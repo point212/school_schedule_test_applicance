@@ -1,0 +1,27 @@
+h1 = title('Sections')
+
+table.table.table-striped.table-hover.table-sm
+  thead
+    tr
+      th scope="col" Teacher subject
+      th scope="col" Classroom
+      th scope="col" Students
+      th scope="col" Start time
+      th scope="col" Duration
+      th scope="col" Days of week
+      th colspan="3" scope="col"
+
+  tbody
+    - @sections.each do |section|
+      tr
+        td = section.teacher_subject
+        td = section.classroom
+        td = section.students
+        td = section.start_time
+        td = section.duration
+        td = section.days_of_week
+        td = link_to 'Show', section
+        td = link_to 'Edit', edit_section_path(section)
+        td = link_to 'Destroy', section, data: { confirm: 'Are you sure?' }, method: :delete
+br
+= link_to 'New Section', new_section_path

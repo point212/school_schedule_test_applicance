@@ -1,0 +1,13 @@
+= simple_form_for(@section) do |f|
+  = errors_for(@section)
+
+  .form-inputs
+      = f.association :teacher_subject
+      = f.association :classroom
+      = f.association :students
+      = f.input :start_time
+      = f.input :duration
+      = f.input :days_of_week
+
+  .form-actions
+    = f.button :submit, class: 'btn-primary'

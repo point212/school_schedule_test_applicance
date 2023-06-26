@@ -1,0 +1,17 @@
+h1 Section
+dl
+  dt Teacher subject:
+  dd = @section.teacher_subject
+  dt Classroom:
+  dd = @section.classroom
+  dt Students:
+  dd = @section.students
+  dt Start time:
+  dd = @section.start_time
+  dt Duration:
+  dd = @section.duration
+  dt Days of week:
+  dd = @section.days_of_week
+= link_to 'Edit', edit_section_path(@section)
+'|
+= link_to 'Back', sections_path
