@@ -2,24 +2,25 @@
 
 
 === Classrooms
-[] Scaffold Classroom model
-[] Add some relations to Classroom model
+[x] Scaffold Classroom model
+[x] Add some relations to Classroom model
 
 === Sections management
-[] Add Sections model
-[] Set proper relations for Sections model
-[] Scaffold Sections related CRUD
+[x] Add Sections model
+[x] Set proper relations for Sections model
+[x] Scaffold Sections related CRUD
+[] Implement validations
 [] Write specs on model
 
 == Student related Tasks
 
 === Student
-[] Scaffold student model
+[x] Scaffold student model
 
 === Schedule management
-[] Schedule model
-[] Schedule model references
-[] Schedule basic CRUD scaffolding
+[x] Schedule model
+[x] Schedule model references
+[x] Schedule basic CRUD scaffolding
 [] Implement Schedule create/edit checks
 
 === Schedule PDF
